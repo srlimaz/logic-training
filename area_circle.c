@@ -1,13 +1,22 @@
 #include <stdio.h>
- 
-int main() {
-	 
-	    /**
-	     *      * Escreva a sua solução aqui
-	     *           * Code your solution here
-	     *                * Escriba su solución aquí
-	     *                     */
-	 
-	    return 0;
+
+void	area_circle(double raio, double *area)
+{
+	double n;
+
+	n = 3.14159;
+	*area = n * (raio * raio);
+}
+
+int main()
+{
+	double raio;
+	double area;
+	
+
+	scanf("%lf", &raio);
+	area_circle(raio, &area);
+	printf("A=%.4f\n", area);
+	return (0);
 }
 
