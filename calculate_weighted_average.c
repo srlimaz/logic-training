@@ -15,10 +15,11 @@ int	main()
 	// Entrada
 	scanf("%lf", &grade1);
 	scanf("%lf", &grade2);
+
 	// Processamento
 	calculate_weighted_average(grade1, grade2, &average);
+
 	// Saída
 	printf("MEDIA = %.5f\n", average);
-
 	return 0;
 }
