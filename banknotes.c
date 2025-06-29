@@ -1,29 +1,34 @@
 #include <stdio.h>
 
-void	calc_banknotes(int entry, int *note100, int *note50, int *note20, int *note10, int *note5, int *note2, int *note1)
+// Calculo para identificar e separar em quantas notas possivel a entrada pode ter
+void	calc_banknotes(int leftover, int *note100, int *note50, int *note20, int *note10, int *note5, int *note2, int *note1)
 {
-	int leftover1, leftover2, leftover3, leftover4, leftover5, leftover6, leftover7;
-
-	*note100 = entry / 100; // exemplo de entrada = 576, o resultado é para ser 5
-	leftover1 = entry - (*note100 * 100); // aqui é para saber o quanto sobrou depois de separar as notas de 100, que seria 76
-	*note50 = leftover1 / 50; // da mesma forma que anteriormente, aqui separa a sobra em notas de 50, o resultado aqui é para ser 1
-	leftover2 = leftover1 - (*note50 * 50); // aqui pegamos a primeira sobra, e tiramos quantas notas foi retirada em 50, que seria 26
-	*note20 = leftover2 / 20; // aqui separamos as notas de 20, sobrando 16
-	leftover3 = leftover2 - (*note20 * 20); // novamente pega a sobra
-	*note10 = leftover3 / 10; // separa as notas de 10
-	leftover4 = leftover3 - (*note10 * 10); // novamente pega a sobra
-	*note5 = leftover4 / 5; // separa as notas de 5
-	leftover5 = leftover4 - (*note5 * 5);
-	*note2 = leftover5 / 2;
-	leftover6 = leftover5 - (*note2 * 2);
-	*note1 = leftover6;
+	// Separação de notas de 100
+	*note100 = leftover / 100; // retiramos o maximo possivel de notas de 100
+	leftover %= 100; // calculo para saber o resto, pegando o valor de entrada, divido por 100, o resto da operação é nossa sobra para prosseguir o calculo
+	// Separação de notas de 50
+	*note50 = leftover / 50; // apartir daqui o código se repete mudando apenas o valor, para saber quantas notas a sobra ainda tem para serem alocadas
+	leftover %= 50; 
+	// Separação de notas de 20
+	*note20 = leftover / 20;
+	leftover %= 20;
+	// Separação de notas de 10
+	*note10 = leftover / 10;
+	leftover %= 10;
+	// Separação de notas de 5
+	*note5 = leftover / 5;
+	leftover %= 5;
+	// Separação de notas de 2
+	*note2 = leftover / 2;
+	leftover %= 2;
+	// Aqui pegamos a ultima sobra sem ter calculo pois não existe mais cédulas abaixo de 1
+	*note1 = leftover;
 }
 
 int	main()
 {
 	int entry;
 	int note100, note50, note20, note10, note5, note2, note1;
-	int result;
 
 	// Entrada
 	scanf("%d", &entry);
