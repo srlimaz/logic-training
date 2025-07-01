@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Calculo anos, meses e dias a partir de um total de dias.
+// Função para calcular anos, meses e dias a partir de um total de dias.
 void	calc_age_conversion(int entry, int *years, int *month, int *days)
 {
 	int temp;

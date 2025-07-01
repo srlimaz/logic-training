@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Função de raiz quadrada
+// Função de raiz quadrada.
 double square_root(double number) 
 {
 	double x = number;
@@ -14,7 +14,7 @@ double square_root(double number)
 	return x;
 }
 
-// Função para calcular a distancia entre dois pontos
+// Função para calcular a distância entre dois pontos.
 void	calc_distance_points(double point_x1, double point_y1, double point_x2, double point_y2, double *distance)
 {
 	double result_root;
@@ -27,14 +27,14 @@ int	main()
 {
 	double x1, y1, x2, y2, result;
 
-	// Entrada
+	// Entrada.
 	scanf("%lf %lf", &x1, &y1);
 	scanf("%lf %lf", &x2, &y2);
 
-	// Processamento
+	// Processamento.
 	calc_distance_points(x1, y1, x2, y2, &result);
 
-	// Saída
+	// Saída.
 	printf("%.4f\n", result);
 	return 0;
 }

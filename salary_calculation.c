@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//Calcula o salario de um funcionario baseado em quantas horas ele trabalhou
+// Função para calcular o salário de um funcionário baseado em quantas horas ele trabalhou.
 void	salary_calculation(int hours_worked, double hourly_rate, double *result)
 {
 	*result = hours_worked * hourly_rate;
@@ -13,15 +13,15 @@ int	main()
 	double value;
 	double result;
 	
-	// Entrada
+	// Entrada.
 	scanf("%d", &employee_code);
 	scanf("%d", &hours);
 	scanf("%lf", &value);
 
-	//Processamento
+	//Processamento.
 	salary_calculation(hours, value, &result);
 
-	//Saída
+	//Saída.
 	printf("NUMBER = %d\n", employee_code);
 	printf("SALARY = U$ %.2f\n", result);
 	return 0;

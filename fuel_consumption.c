@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// Função para calcular quantos litros um veículo consome pela distância percorrida.
 void	calc_consumption(double kmh, double time,double *result)
 {
 	*result = (kmh * time) / 12;
@@ -11,14 +12,14 @@ int	main()
 	int time;
 	double result;
 
-	// Entrada
+	// Entrada.
 	scanf("%d", &time);
 	scanf("%d", &kmh);
 
-	// Processamento
+	// Processamento.
 	calc_consumption(kmh, time, &result);
 
-	// Saída
+	// Saída.
 	printf("%.3f\n", result);
 	return 0;
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Calcula o produto de (A e B) e (C e D), calcula a diferença entre os dois resultados
+// Função para calcular o produto de (A e B) e (C e D) e a diferença entre os dois resultados.
 void	product_difference(int A, int B, int C, int D, int *diff)
 {
 	*diff = ((A * B) - (C * D));
@@ -14,16 +14,16 @@ int	main()
 	int D;
 	int diff;
 
-	// Entrada
+	// Entrada.
 	scanf("%d", &A);
 	scanf("%d", &B);
 	scanf("%d", &C);
 	scanf("%d", &D);
 	
-	// Processamento
+	// Processamento.
 	product_difference(A, B, C, D, &diff);
 
-	// Saída
+	// Saída.
 	printf("DIFERENCA = %d\n", diff);
 	return 0;
 }
