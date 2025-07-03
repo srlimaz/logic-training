@@ -3,7 +3,7 @@
 // Função para identificar e separar em quantas notas possíveis a entrada pode ter.
 void calc_banknotes(int leftover, int *note100, int *note50, int *note20, int *note10, int *note5, int *note2, int *coin1, int *coin50, int *coin25, int *coin10, int *coin5, int *cent1)
 {
-	*note100 = leftover / 10000;
+	*note100 = leftover / 10000; // Usando número inteiro, a divisão e o resto é feita com dois zeros a mais, pois uma entrada 100.00, ficaria 10000.
 	leftover %= 10000;
 
 	*note50 = leftover / 5000;
@@ -48,7 +48,7 @@ int	main()
 
 	// Entrada.
 	scanf("%lf", &entry);
-	total_cents = (int)(entry * 100 + 0.5);
+	total_cents = (int)(entry * 100 + 0.5); // Converte a entrada de ponto flutuante para int para facilitar o processo sem usar o math.h.
 
 	// Processamento.
 	calc_banknotes(total_cents, &note100, &note50, &note20, &note10, &note5, &note2, &coin1, &coin50, &coin25, &coin10, &coin5, &cent1);
