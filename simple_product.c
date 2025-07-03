@@ -12,12 +12,12 @@ int	main()
 	int A;
 	int B;
 
-	// Entrada
+	// Entrada.
 	scanf("%d", &A);
 	scanf("%d", &B);
-	// Processamento
+	// Processamento.
 	simple_product(A, B, &PROD);
-	// Saída
+	// Saída.
 	printf("PROD = %d\n", PROD);
 	return(0);
 }
